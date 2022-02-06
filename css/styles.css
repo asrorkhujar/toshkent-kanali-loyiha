@@ -27,12 +27,16 @@ body {
 h1 {
     font-size: 36px;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.5s ease;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
 }
 h1:hover{
     background-color: darkred;
     color: white;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.5s ease;
+
+
 }
 h1, h2, h3, h4, h5 {
     line-height: 1.2;
@@ -43,20 +47,21 @@ h2,h3,h4{
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-top: 10px;
     font-size: 18px;
 }
 .marifiy, .ijtimoiy, .contact{
     width: 90%;
-    text;
-}
-h2:hover{
-    background-color: darkred;
-    color: white;
     border-radius: 20px;
     padding: 10px;
     transition: background-color 0.5s ease;
+    text-align: center;
 }
+
+h2:hover{
+    background-color: darkred;
+    color: white;
+}
+
 p {
     font-weight: bold;
     font-style: none;
@@ -64,14 +69,21 @@ p {
     text-transform: none;
     letter-spacing: 1px;
     padding-bottom: 20px;
-    
+
 }
-li:hover{
+
+/* li {
+    display: inline-block;
+} */
+
+/* li:hover{
     background-color: lightblue;
-}
+} */
+
 a{
     text-decoration: none;
 }
+
 .container{
     max-width: 1000px;
     margin-left: auto;
@@ -79,6 +91,7 @@ a{
     padding-left: 30px;
     padding-right: 30px;
 }
+
 .theme-controls{
     position: fixed;
     right:20px;
@@ -86,72 +99,98 @@ a{
     z-index: 10;
     display: flex;
 }
+
 .theme-controls button{
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
+
 .theme-controls button + button{
     margin-left: 10px;
 }
+
 .dark-mode .theme-controls button {
     border: 1px solid #fff;
     background-color: #222;
     color: #fff;
 }
 .site-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     padding: 25px;
 }
+
 .logo{
     width: 200px;
-    height: none;
-    /* 	margin-right: 500px; */
-    padding-top: 20px;
+    padding: 5px;
+    border-radius: 15px;
     vertical-align: middle;
-    
-    /*   border: 3px solid red;
-    border-radius: 10px; */
-    
 }
+
 .promo-video{
     text-align: center;
 }
+
 .parts1 li, .parts2 li, .contacts li{
     margin-bottom: 5px;
     justify-content: space-between;
 }
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-list {
+ list-style: none;
+}
+
 .contacts-list a{
-    font-style: regular;
     font-size: 16px;
     display: inline-block;
     border-bottom: 2px solid blue;
+    border-radius: 10px;
+    padding: 10px;
     color: darkblue;
     line-height: 1.5;
     text-transform: none;
-    letter-spacing: 2px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.parts-contacts{
-    display: flex;
-}
-.parts1, .parts2, .contacts{
-    width: 50%;
-}
+
 .contacts-list a:hover{
     background-color: lightblue;
     color: red;
+    border-bottom: 2px solid red;
 }
 .contacts-list a:active{
     background-color: lightgreen;
 }
+
+.parts-contacts{
+    display: flex;
+}
+
+.parts1, .parts2, .contacts{
+    width: 50%;
+}
+
 .dark-mode .contacts-list a:hover {
     color: #222;
 }
+
 .dark-mode .contacts-list a {
     color: gold;
     border-bottom: 2px solid white;
 }
+
+.map h2 {
+    display: inline-block;
+    padding: 15px;
+}
+
 .map iframe{
     width: 100%;
     border: 1px solid black;
